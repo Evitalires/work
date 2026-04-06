@@ -1,0 +1,565 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Job Details | Work</title>
+    <!-- Google Fonts: Manrope & Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#001c37",
+              "on-primary-fixed": "#001452",
+              "surface-tint": "#004ced",
+              "surface-dim": "#d8dadc",
+              surface: "#f7f9fb",
+              "on-secondary-container": "#49617f",
+              "on-error": "#ffffff",
+              "secondary-container": "#c4dcff",
+              primary: "#000a34",
+              "surface-container-low": "#f2f4f6",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#38485d",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              secondary: "#49607e",
+              "secondary-fixed-dim": "#b0c8eb",
+              "on-surface-variant": "#43474d",
+              tertiary: "#000f22",
+              "surface-container-highest": "#e0e3e5",
+              error: "#ba1a1a",
+              "on-tertiary-container": "#7c8ca4",
+              "on-surface": "#191c1e",
+              "secondary-fixed": "#d2e4ff",
+              "inverse-primary": "#b7c4ff",
+              "on-secondary": "#ffffff",
+              "surface-variant": "#e0e3e5",
+              "surface-container": "#eceef0",
+              outline: "#74777e",
+              "primary-container": "#001c66",
+              "inverse-surface": "#2d3133",
+              "on-error-container": "#93000a",
+              "tertiary-fixed-dim": "#b7c8e1",
+              "primary-fixed": "#dde1ff",
+              "on-tertiary-fixed": "#0b1c30",
+              "surface-bright": "#f7f9fb",
+              "inverse-on-surface": "#eff1f3",
+              "on-background": "#191c1e",
+              "tertiary-container": "#142538",
+              "on-secondary-fixed-variant": "#314865",
+              "outline-variant": "#c4c6ce",
+              "on-primary-fixed-variant": "#0038b6",
+              "on-primary-container": "#6182ff",
+              "surface-container-high": "#e6e8ea",
+              background: "#f7f9fb",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#d3e4fe",
+              "primary-fixed-dim": "#b7c4ff",
+            },
+            fontFamily: {
+              headline: ["Manrope", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+              label: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+      .editorial-shadow {
+        box-shadow: 0 8px 40px rgba(25, 28, 30, 0.05);
+      }
+      .glass-effect {
+        backdrop-filter: blur(12px);
+        background: rgba(247, 249, 251, 0.8);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white"
+  >
+    <!-- TopNavBar (Shared Component) -->
+    <header
+      class="w-full top-0 sticky z-50 bg-[#f7f9fb] dark:bg-[#000a34] font-manrope tracking-tight font-bold text-sm"
+    >
+      <div
+        class="flex justify-between items-center max-w-7xl mx-auto px-12 py-4"
+      >
+        <div class="flex items-center gap-12">
+          <a
+            class="text-2xl font-black tracking-tighter text-[#000a34] dark:text-[#ffffff]"
+            href="#"
+            >Work</a
+          >
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-[#000a34] dark:hover:text-white transition-colors"
+              href="#"
+              >Jobs</a
+            >
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-[#000a34] dark:hover:text-white transition-colors"
+              href="#"
+              >Companies</a
+            >
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-[#000a34] dark:hover:text-white transition-colors"
+              href="#"
+              >Salaries</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="text-slate-500 dark:text-slate-400 hover:text-[#000a34] dark:hover:text-white transition-colors"
+          >
+            Sign In
+          </button>
+          <button
+            class="bg-primary-container text-on-primary px-5 py-2 rounded-lg hover:bg-primary transition-all duration-200 active:opacity-80 active:scale-95"
+          >
+            Post a Job
+          </button>
+        </div>
+      </div>
+    </header>
+    <main
+      class="max-w-7xl mx-auto px-12 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12"
+    >
+      <!-- Left Column: Content (Asymmetrical Flow) -->
+      <div class="lg:col-span-8 space-y-12">
+        <!-- Hero Header Section -->
+        <section class="space-y-6">
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase"
+              >Technology</span
+            >
+            <span
+              class="bg-surface-container-highest text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase"
+              >Remote</span
+            >
+          </div>
+          <h1
+            class="text-5xl font-extrabold font-headline text-primary tracking-tight leading-tight"
+          >
+            Senior Editorial Product Director
+          </h1>
+          <div
+            class="flex items-center gap-6 text-on-surface-variant font-medium"
+          >
+            <div class="flex items-center gap-2">
+              <span
+                class="material-symbols-outlined text-xl"
+                data-icon="apartment"
+                >apartment</span
+              >
+              <span>Nexus Media Group</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="material-symbols-outlined text-xl"
+                data-icon="location_on"
+                >location_on</span
+              >
+              <span>Madrid, Spain</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="material-symbols-outlined text-xl"
+                data-icon="schedule"
+                >schedule</span
+              >
+              <span>Posted 2 days ago</span>
+            </div>
+          </div>
+        </section>
+        <!-- Job Description -->
+        <section class="space-y-8">
+          <div class="space-y-4">
+            <h2
+              class="text-xs font-bold font-headline text-on-surface-variant tracking-[0.2em] uppercase"
+            >
+              About the Position
+            </h2>
+            <p class="text-lg leading-relaxed text-on-surface">
+              We are looking for a Product Director with strategic vision to
+              lead our next generation of digital platforms. At Nexus Media
+              Group, we don't just build tools; we define how the world consumes
+              high-fidelity information. You will be the architect of
+              experiences that fuse elite journalism with cutting-edge
+              technology.
+            </p>
+          </div>
+          <!-- Bento-style Grid for Highlights -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-surface-container-low p-8 rounded-xl space-y-4">
+              <span
+                class="material-symbols-outlined text-primary text-3xl"
+                data-icon="target"
+                >target</span
+              >
+              <h3 class="font-headline font-bold text-xl">Main Mission</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Define the quarterly roadmap and align engineering and design
+                teams under a unified editorial product vision.
+              </p>
+            </div>
+            <div class="bg-surface-container-low p-8 rounded-xl space-y-4">
+              <span
+                class="material-symbols-outlined text-primary text-3xl"
+                data-icon="groups"
+                >groups</span
+              >
+              <h3 class="font-headline font-bold text-xl">Leadership</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Manage an interdisciplinary team of 15 professionals, fostering
+                a culture of excellence and continuous improvement.
+              </p>
+            </div>
+          </div>
+          <div class="space-y-6 pt-4">
+            <h2
+              class="text-xs font-bold font-headline text-on-surface-variant tracking-[0.2em] uppercase"
+            >
+              Key Requirements
+            </h2>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <span
+                  class="material-symbols-outlined text-primary mt-1"
+                  data-icon="check_circle"
+                  >check_circle</span
+                >
+                <span class="text-on-surface"
+                  >More than 8 years of experience in digital product
+                  management, preferably in the media or SaaS sector.</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="material-symbols-outlined text-primary mt-1"
+                  data-icon="check_circle"
+                  >check_circle</span
+                >
+                <span class="text-on-surface"
+                  >Proven ability to analyze complex metrics and transform them
+                  into clear strategic actions.</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="material-symbols-outlined text-primary mt-1"
+                  data-icon="check_circle"
+                  >check_circle</span
+                >
+                <span class="text-on-surface"
+                  >Excellent communication skills in Spanish and English
+                  (C1/C2).</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <span
+                  class="material-symbols-outlined text-primary mt-1"
+                  data-icon="check_circle"
+                  >check_circle</span
+                >
+                <span class="text-on-surface"
+                  >Results-oriented mindset with a critical eye for high-end
+                  UI/UX design.</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-6 pt-4">
+            <h2
+              class="text-xs font-bold font-headline text-on-surface-variant tracking-[0.2em] uppercase"
+            >
+              Benefits
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div
+                class="flex items-center gap-4 p-4 border border-outline-variant/15 rounded-lg"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary"
+                  data-icon="payments"
+                  >payments</span
+                >
+                <span class="font-medium">Competitive Salary (75k - 95k)</span>
+                <div
+                  class="flex items-center gap-4 p-4 border border-outline-variant/15 rounded-lg"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary"
+                    data-icon="home_work"
+                    >home_work</span
+                  >
+                  <span class="font-medium">Flexible Hybrid Model</span>
+                  <div
+                    class="flex items-center gap-4 p-4 border border-outline-variant/15 rounded-lg"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary"
+                      data-icon="health_and_safety"
+                      >health_and_safety</span
+                    >
+                    <span class="font-medium">Premium Health Insurance</span>
+                    <div
+                      class="flex items-center gap-4 p-4 border border-outline-variant/15 rounded-lg"
+                    >
+                      <span
+                        class="material-symbols-outlined text-secondary"
+                        data-icon="fitness_center"
+                        >fitness_center</span
+                      >
+                      <span class="font-medium"
+                        >Wellness &amp; Gym Subscription</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Right Column: Sidebar (Sticky & Concise) -->
+      <aside class="lg:col-span-4">
+        <div class="sticky top-24 space-y-8">
+          <!-- Apply Card -->
+          <div
+            class="bg-surface-container-lowest p-8 rounded-xl editorial-shadow border border-outline-variant/10 space-y-6"
+          >
+            <div class="space-y-2">
+              <p
+                class="text-xs font-bold text-on-surface-variant tracking-widest uppercase"
+              >
+                Immediate Action
+              </p>
+              <h3 class="text-2xl font-headline font-bold text-primary">
+                Boost Your Career
+              </h3>
+            </div>
+            <button
+              class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all active:scale-95"
+            >
+              Apply Now
+            </button>
+            <div class="flex flex-col gap-3 text-sm text-on-surface-variant">
+              <div class="flex items-center justify-between">
+                <span>Applicants</span>
+                <span class="font-bold text-primary">124</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Level</span>
+                <span class="font-bold text-primary">Senior / Executive</span>
+              </div>
+            </div>
+            <hr class="border-outline-variant/10" />
+            <div class="flex justify-center gap-4">
+              <button
+                class="flex items-center gap-2 text-xs font-bold uppercase tracking-tight hover:text-primary transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="share"
+                  >share</span
+                >
+                Share
+              </button>
+              <button
+                class="flex items-center gap-2 text-xs font-bold uppercase tracking-tight hover:text-primary transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="bookmark"
+                  >bookmark</span
+                >
+                Save
+              </button>
+            </div>
+          </div>
+          <!-- Company Snapshot -->
+          <div class="bg-surface-container-low p-8 rounded-xl space-y-6">
+            <div class="flex items-center gap-4">
+              <img
+                alt="Nexus Media Logo"
+                class="w-12 h-12 rounded-lg object-cover"
+                data-alt="minimalist modern corporate building facade with glass windows and clean architectural lines in daylight"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAByiD4pJnTvK8sbppUi4E9lX2kU4wyPxPi2b7M_cjwOfFN2_G90OrQWo0HlUwdlWgYdp_GXrVOy_mAylxyZypfgtAHkkgUmrTVhHh1OrTGINz_XPuQzEjXj68dnvGUYCsn8ipAvI4WNQC8qRcqTuwRpgRcXQK9rn93I4nr-FggT310acouR80CDl4FRr4DSSdtooPLrBr8CH5AfVqnL3JCbo1hXayoxvrq6Zm9152nmjypkghII-AqhvCEXMRByjqZidnXuCq3Cpw"
+              />
+              <div>
+                <h4 class="font-headline font-bold text-lg">
+                  Nexus Media Group
+                </h4>
+                <p class="text-xs text-on-surface-variant">
+                  Media &amp; Advertising
+                </p>
+              </div>
+            </div>
+            <p class="text-sm leading-relaxed text-on-surface-variant">
+              Leaders in the European digital ecosystem, with a reach of more
+              than 40 million unique monthly users.
+            </p>
+            <a
+              class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest hover:underline"
+              href="#"
+            >
+              View company profile
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="arrow_forward"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <!-- Detailed Company Section (Bento Grid) -->
+    <section class="bg-surface-container-low py-20 mt-12">
+      <div class="max-w-7xl mx-auto px-12">
+        <h2
+          class="text-xs font-bold font-headline text-on-surface-variant tracking-[0.2em] uppercase mb-12"
+        >
+          Why work at Nexus
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-surface-container-lowest p-10 rounded-xl editorial-shadow"
+          >
+            <h4 class="font-headline font-bold text-xl mb-4 text-primary">
+              Innovation Culture
+            </h4>
+            <p class="text-sm text-on-surface-variant">
+              We don't just follow trends, we create them. We invest 20% of our
+              time in R&D projects.
+            </p>
+          </div>
+          <div
+            class="md:col-span-2 relative overflow-hidden rounded-xl h-64 md:h-auto"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent z-10"
+            ></div>
+            <img
+              alt="Office Culture"
+              class="absolute inset-0 w-full h-full object-cover"
+              data-alt="contemporary open plan office space with high ceilings, large windows, and people collaborating at minimalist desks"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaJbaHHs1na1h3-Nm2QIwPFvc5mE9gFtQccNFOjznt9yB88itJOQswrB5p94OwTAcpNyxfYgZCDu_bZ2BScqL4fUZJincOW5SPTA3KXHoFCI3dJ0vr0O5wDYjVfS687xvvQgjaEn1S78Gr8KtE7ifnUlA_iKRbNxpkJOAu3erQWJ7RODVzkBVIYKGc1cKmlgaNIsGb2A5NsEOY0e4eixLABMpcyy5Vfka-GvidIBm4yBlqYJAyw_cryx1aq41WS80OfoqhUvi4h0o"
+            />
+            <div class="absolute bottom-6 left-6 z-20 text-on-primary">
+              <p class="text-xs font-bold uppercase tracking-widest opacity-80">
+                Our Offices
+              </p>
+              <h4 class="text-2xl font-headline font-bold">
+                A space designed for creation.
+              </h4>
+            </div>
+          </div>
+          <div class="bg-primary p-10 rounded-xl text-on-primary">
+            <h4 class="font-headline font-bold text-xl mb-4">
+              Global Diversity
+            </h4>
+            <p class="text-sm opacity-80">
+              A team of 24 nationalities working towards a single goal:
+              informational excellence.
+            </p>
+          </div>
+          <div class="bg-surface-container-highest p-10 rounded-xl">
+            <h4 class="font-headline font-bold text-xl mb-4 text-primary">
+              Sustainability
+            </h4>
+            <p class="text-sm text-on-surface-variant">
+              Committed to carbon neutrality by 2028.
+            </p>
+          </div>
+          <div
+            class="bg-surface-container-lowest p-10 rounded-xl editorial-shadow"
+          >
+            <h4 class="font-headline font-bold text-xl mb-4 text-primary">
+              Growth
+            </h4>
+            <p class="text-sm text-on-surface-variant">
+              Personalized career plans and annual budget for external training.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer (Shared Component) -->
+    <footer class="bg-primary text-white p-8 flex justify-between items-center">
+      <article class="flex flex-wrap items-center gap-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1.5em"
+          height="1.em"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="icon icon-tabler icons-tabler-filled icon-tabler-briefcase"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z"
+          />
+        </svg>
+        <h1 class="text-lg font-bold">Work</h1>
+
+        <small class="w-full mt-2 text-sm opacity-80"
+          >&copy; 2024 Work. All rights reserved.</small
+        >
+      </article>
+
+      <section class="flex gap-6">
+        <a
+          href=""
+          class="text-on-surface-variant no-underline font-medium transition-colors duration-200 hover:text-primary-container"
+          >Privacy Policy</a
+        >
+        <a
+          href=""
+          class="text-on-surface-variant no-underline font-medium transition-colors duration-200 hover:text-primary-container"
+          >Terms of Service</a
+        >
+        <a
+          href=""
+          class="text-on-surface-variant no-underline font-medium transition-colors duration-200 hover:text-primary-container"
+          >Contact Us</a
+        >
+      </section>
+    </footer>
+  </body>
+</html>

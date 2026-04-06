@@ -95,69 +95,6 @@ button {
     pointer-events: none;
   }
 }
-body > header:first-child {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: var(--shadow);
-}
-
-/* Header */
-header {
-  border-bottom: 1px solid var(--border);
-  background: var(--background);
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-
-  h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text-primary);
-  }
-
-  div {
-    button:first-child {
-      background-color: transparent;
-      color: var(--text-muted);
-      border: 1px solid var(--text-muted);
-
-      &:hover {
-        color: var(--primary-dark);
-        border-color: var(--primary-dark);
-      }
-    }
-  }
-}
-
-/* Navegación del header a otras páginas */
-nav {
-  align-items: center;
-  gap: 1rem;
-  display: flex;
-  justify-content: space-between;
-
-  ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-
-    li a {
-      text-decoration: none;
-      color: var(--text-secondary);
-      transition: color 0.2s;
-      font-weight: 500;
-
-      &:hover,
-      &:focus {
-        color: var(--primary);
-        outline: none;
-      }
-    }
-  }
-}
 
 main {
   section:first-child {

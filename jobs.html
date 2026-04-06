@@ -4,13 +4,10 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Job Details | Work</title>
-    <!-- Google Fonts: Manrope & Inter -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
       rel="stylesheet"
     />
-    <!-- Material Symbols -->
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
@@ -26,64 +23,64 @@
         theme: {
           extend: {
             colors: {
-              "on-secondary-fixed": "#001c37",
-              "on-primary-fixed": "#001452",
-              "surface-tint": "#004ced",
-              "surface-dim": "#d8dadc",
-              surface: "#f7f9fb",
-              "on-secondary-container": "#49617f",
-              "on-error": "#ffffff",
-              "secondary-container": "#c4dcff",
-              primary: "#000a34",
-              "surface-container-low": "#f2f4f6",
-              "error-container": "#ffdad6",
-              "on-tertiary-fixed-variant": "#38485d",
-              "surface-container-lowest": "#ffffff",
-              "on-primary": "#ffffff",
-              secondary: "#49607e",
-              "secondary-fixed-dim": "#b0c8eb",
-              "on-surface-variant": "#43474d",
-              tertiary: "#000f22",
-              "surface-container-highest": "#e0e3e5",
-              error: "#ba1a1a",
-              "on-tertiary-container": "#7c8ca4",
-              "on-surface": "#191c1e",
-              "secondary-fixed": "#d2e4ff",
-              "inverse-primary": "#b7c4ff",
-              "on-secondary": "#ffffff",
-              "surface-variant": "#e0e3e5",
-              "surface-container": "#eceef0",
-              outline: "#74777e",
-              "primary-container": "#001c66",
-              "inverse-surface": "#2d3133",
-              "on-error-container": "#93000a",
-              "tertiary-fixed-dim": "#b7c8e1",
-              "primary-fixed": "#dde1ff",
-              "on-tertiary-fixed": "#0b1c30",
-              "surface-bright": "#f7f9fb",
-              "inverse-on-surface": "#eff1f3",
-              "on-background": "#191c1e",
-              "tertiary-container": "#142538",
-              "on-secondary-fixed-variant": "#314865",
-              "outline-variant": "#c4c6ce",
-              "on-primary-fixed-variant": "#0038b6",
-              "on-primary-container": "#6182ff",
               "surface-container-high": "#e6e8ea",
-              background: "#f7f9fb",
-              "on-tertiary": "#ffffff",
+              primary: "#000a34",
+              "surface-bright": "#f7f9fb",
+              "secondary-container": "#c4dcff",
               "tertiary-fixed": "#d3e4fe",
+              "on-secondary": "#ffffff",
               "primary-fixed-dim": "#b7c4ff",
-            },
-            fontFamily: {
-              headline: ["Manrope", "sans-serif"],
-              body: ["Inter", "sans-serif"],
-              label: ["Inter", "sans-serif"],
+              "surface-container-low": "#f2f4f6",
+              "inverse-primary": "#b7c4ff",
+              "tertiary-container": "#142538",
+              "inverse-surface": "#2d3133",
+              "surface-container-lowest": "#ffffff",
+              error: "#ba1a1a",
+              "surface-container": "#eceef0",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#b7c8e1",
+              "secondary-fixed-dim": "#b0c8eb",
+              "on-secondary-fixed-variant": "#314865",
+              "on-surface-variant": "#43474d",
+              "on-background": "#191c1e",
+              background: "#f7f9fb",
+              "on-secondary-fixed": "#001c37",
+              "on-tertiary-container": "#7c8ca4",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#eff1f3",
+              "surface-dim": "#d8dadc",
+              "secondary-fixed": "#d2e4ff",
+              "primary-fixed": "#dde1ff",
+              "on-error-container": "#93000a",
+              "surface-variant": "#e0e3e5",
+              "on-tertiary-fixed": "#0b1c30",
+              "on-primary-fixed": "#001452",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#38485d",
+              "on-surface": "#191c1e",
+              "outline-variant": "#c4c6ce",
+              "surface-container-highest": "#e0e3e5",
+              "primary-container": "#001c66",
+              "on-primary-fixed-variant": "#0038b6",
+              "surface-tint": "#004ced",
+              "on-secondary-container": "#49617f",
+              secondary: "#49607e",
+              outline: "#74777e",
+              surface: "#f7f9fb",
+              "on-tertiary": "#ffffff",
+              tertiary: "#000f22",
+              "on-primary-container": "#6182ff",
             },
             borderRadius: {
               DEFAULT: "0.125rem",
               lg: "0.25rem",
               xl: "0.5rem",
               full: "0.75rem",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
             },
           },
         },
@@ -96,21 +93,20 @@
           "wght" 400,
           "GRAD" 0,
           "opsz" 24;
-        vertical-align: middle;
       }
-      .editorial-shadow {
-        box-shadow: 0 8px 40px rgba(25, 28, 30, 0.05);
+      body {
+        font-family: "Inter", sans-serif;
       }
-      .glass-effect {
-        backdrop-filter: blur(12px);
-        background: rgba(247, 249, 251, 0.8);
+      h1,
+      h2,
+      h3,
+      .brand-font {
+        font-family: "Manrope", sans-serif;
       }
     </style>
   </head>
-  <body
-    class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white"
-  >
-    <!-- TopNavBar (Shared Component) -->
+  <body class="bg-background text-on-surface min-h-screen flex flex-col">
+    <!-- Top Navigation Bar -->
     <header
       class="w-full top-0 sticky z-50 bg-[#f7f9fb] dark:bg-[#000a34] font-manrope tracking-tight font-bold text-sm"
     >
@@ -155,399 +151,362 @@
         </div>
       </div>
     </header>
-    <main
-      class="max-w-7xl mx-auto px-12 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12"
-    >
-      <!-- Left Column: Content (Asymmetrical Flow) -->
-      <div class="lg:col-span-8 space-y-12">
-        <!-- Hero Header Section -->
-        <section class="space-y-6">
-          <div class="flex flex-wrap gap-2">
-            <span
-              class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase"
-              >Technology</span
-            >
-            <span
-              class="bg-surface-container-highest text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase"
-              >Remote</span
-            >
-          </div>
-          <h1
-            class="text-5xl font-extrabold font-headline text-primary tracking-tight leading-tight"
-          >
-            Senior Editorial Product Director
-          </h1>
+    <!-- Main Content Canvas -->
+    <main class="pt-32 pb-20 px-4 md:px-12 max-w-7xl mx-auto w-full flex-grow">
+      <!-- Page Header & Hero Search Section -->
+      <header class="mb-12">
+        <h1 class="text-5xl font-extrabold tracking-tighter text-primary mb-4">
+          Job Search Results
+        </h1>
+        <p class="text-on-surface-variant max-w-2xl mb-8 font-light text-lg">
+          Browse our architectural ledger of prestigious roles across the global
+          industry landscape.
+        </p>
+        <!-- Search & Filter Cluster -->
+        <div
+          class="bg-surface-container-low p-2 rounded-xl flex flex-col md:flex-row gap-2"
+        >
           <div
-            class="flex items-center gap-6 text-on-surface-variant font-medium"
+            class="flex-grow flex items-center bg-surface-container-lowest rounded-lg px-4 py-3 group"
           >
-            <div class="flex items-center gap-2">
-              <span
-                class="material-symbols-outlined text-xl"
-                data-icon="apartment"
-                >apartment</span
+            <span class="material-symbols-outlined text-outline mr-3"
+              >search</span
+            >
+            <input
+              class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline-variant font-medium"
+              placeholder="Search roles, skills, or companies..."
+              type="text"
+            />
+          </div>
+          <div class="flex gap-2">
+            <div class="relative group">
+              <button
+                class="bg-surface-container-lowest px-4 py-3 rounded-lg flex items-center gap-3 text-sm font-semibold text-primary hover:bg-surface-bright transition-colors"
               >
-              <span>Nexus Media Group</span>
+                Department
+                <span class="material-symbols-outlined text-sm"
+                  >expand_more</span
+                >
+              </button>
             </div>
-            <div class="flex items-center gap-2">
-              <span
-                class="material-symbols-outlined text-xl"
-                data-icon="location_on"
-                >location_on</span
+            <div class="relative group">
+              <button
+                class="bg-surface-container-lowest px-4 py-3 rounded-lg flex items-center gap-3 text-sm font-semibold text-primary hover:bg-surface-bright transition-colors"
               >
-              <span>Madrid, Spain</span>
+                Location
+                <span class="material-symbols-outlined text-sm"
+                  >location_on</span
+                >
+              </button>
             </div>
-            <div class="flex items-center gap-2">
-              <span
-                class="material-symbols-outlined text-xl"
-                data-icon="schedule"
-                >schedule</span
+            <div class="relative group">
+              <button
+                class="bg-surface-container-lowest px-4 py-3 rounded-lg flex items-center gap-3 text-sm font-semibold text-primary hover:bg-surface-bright transition-colors"
               >
-              <span>Posted 2 days ago</span>
+                Salary Range
+                <span class="material-symbols-outlined text-sm">payments</span>
+              </button>
+            </div>
+            <button
+              class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-container transition-all"
+            >
+              Apply Filters
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- Main Listing Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Sidebar Stats (Asymmetric Layout) -->
+        <aside class="lg:col-span-3 space-y-6">
+          <div class="p-6 bg-surface-container rounded-xl">
+            <h3
+              class="label-md font-bold text-xs uppercase tracking-widest text-on-surface-variant mb-4"
+            >
+              Market Insight
+            </h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-end">
+                <span class="text-sm font-medium">New Listings</span>
+                <span class="text-2xl font-black text-primary">124</span>
+              </div>
+              <div
+                class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden"
+              >
+                <div
+                  class="h-full w-[65%] bg-gradient-to-r from-primary to-primary-container"
+                ></div>
+              </div>
+              <p class="text-xs text-on-surface-variant">
+                Daily volume up by 12% from previous week.
+              </p>
             </div>
           </div>
-        </section>
-        <!-- Job Description -->
-        <section class="space-y-8">
-          <div class="space-y-4">
-            <h2
-              class="text-xs font-bold font-headline text-on-surface-variant tracking-[0.2em] uppercase"
+          <div class="p-6 bg-tertiary-container text-tertiary-fixed rounded-xl">
+            <span
+              class="material-symbols-outlined mb-4"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >verified</span
             >
-              About the Position
-            </h2>
-            <p class="text-lg leading-relaxed text-on-surface">
-              We are looking for a Product Director with strategic vision to
-              lead our next generation of digital platforms. At Nexus Media
-              Group, we don't just build tools; we define how the world consumes
-              high-fidelity information. You will be the architect of
-              experiences that fuse elite journalism with cutting-edge
-              technology.
+            <h4 class="font-bold mb-2">Verified Institutions</h4>
+            <p class="text-sm text-on-tertiary-container leading-relaxed">
+              Connect with organizations that meet our rigorous editorial
+              standards for permanence and growth.
             </p>
           </div>
-          <!-- Bento-style Grid for Highlights -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-surface-container-low p-8 rounded-xl space-y-4">
-              <span
-                class="material-symbols-outlined text-primary text-3xl"
-                data-icon="target"
-                >target</span
+        </aside>
+        <!-- Results Listing -->
+        <div class="lg:col-span-9 space-y-4">
+          <!-- Job Card 1 -->
+          <div
+            class="bg-surface-container-lowest p-8 rounded-xl flex flex-col md:flex-row justify-between items-start gap-6 hover:bg-surface-container-low transition-all group duration-300"
+          >
+            <div class="max-w-2xl">
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold uppercase tracking-wider"
+                  >Remote</span
+                >
+                <span class="text-on-surface-variant text-sm font-medium"
+                  >TechFlow Systems</span
+                >
+              </div>
+              <h2
+                class="text-2xl font-extrabold text-primary mb-3 group-hover:text-primary-container transition-colors"
               >
-              <h3 class="font-headline font-bold text-xl">Main Mission</h3>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
-                Define the quarterly roadmap and align engineering and design
-                teams under a unified editorial product vision.
+                Senior Software Engineer
+              </h2>
+              <p class="text-on-surface-variant leading-relaxed text-sm">
+                Architecting the future of scalable infrastructure. We are
+                seeking a visionary to lead our core systems migration toward a
+                distributed micro-ledger architecture.
               </p>
-            </div>
-            <div class="bg-surface-container-low p-8 rounded-xl space-y-4">
-              <span
-                class="material-symbols-outlined text-primary text-3xl"
-                data-icon="groups"
-                >groups</span
-              >
-              <h3 class="font-headline font-bold text-xl">Leadership</h3>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
-                Manage an interdisciplinary team of 15 professionals, fostering
-                a culture of excellence and continuous improvement.
-              </p>
-            </div>
-          </div>
-          <div class="space-y-6 pt-4">
-            <h2
-              class="text-xs font-bold font-headline text-on-surface-variant tracking-[0.2em] uppercase"
-            >
-              Key Requirements
-            </h2>
-            <ul class="space-y-4">
-              <li class="flex items-start gap-4">
-                <span
-                  class="material-symbols-outlined text-primary mt-1"
-                  data-icon="check_circle"
-                  >check_circle</span
-                >
-                <span class="text-on-surface"
-                  >More than 8 years of experience in digital product
-                  management, preferably in the media or SaaS sector.</span
-                >
-              </li>
-              <li class="flex items-start gap-4">
-                <span
-                  class="material-symbols-outlined text-primary mt-1"
-                  data-icon="check_circle"
-                  >check_circle</span
-                >
-                <span class="text-on-surface"
-                  >Proven ability to analyze complex metrics and transform them
-                  into clear strategic actions.</span
-                >
-              </li>
-              <li class="flex items-start gap-4">
-                <span
-                  class="material-symbols-outlined text-primary mt-1"
-                  data-icon="check_circle"
-                  >check_circle</span
-                >
-                <span class="text-on-surface"
-                  >Excellent communication skills in Spanish and English
-                  (C1/C2).</span
-                >
-              </li>
-              <li class="flex items-start gap-4">
-                <span
-                  class="material-symbols-outlined text-primary mt-1"
-                  data-icon="check_circle"
-                  >check_circle</span
-                >
-                <span class="text-on-surface"
-                  >Results-oriented mindset with a critical eye for high-end
-                  UI/UX design.</span
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="space-y-6 pt-4">
-            <h2
-              class="text-xs font-bold font-headline text-on-surface-variant tracking-[0.2em] uppercase"
-            >
-              Benefits
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div
-                class="flex items-center gap-4 p-4 border border-outline-variant/15 rounded-lg"
-              >
-                <span
-                  class="material-symbols-outlined text-secondary"
-                  data-icon="payments"
-                  >payments</span
-                >
-                <span class="font-medium">Competitive Salary (75k - 95k)</span>
+              <div class="mt-6 flex gap-4">
                 <div
-                  class="flex items-center gap-4 p-4 border border-outline-variant/15 rounded-lg"
+                  class="flex items-center text-xs font-semibold text-outline"
                 >
-                  <span
-                    class="material-symbols-outlined text-secondary"
-                    data-icon="home_work"
-                    >home_work</span
+                  <span class="material-symbols-outlined text-sm mr-1"
+                    >schedule</span
                   >
-                  <span class="font-medium">Flexible Hybrid Model</span>
-                  <div
-                    class="flex items-center gap-4 p-4 border border-outline-variant/15 rounded-lg"
+                  2 days ago
+                </div>
+                <div
+                  class="flex items-center text-xs font-semibold text-outline"
+                >
+                  <span class="material-symbols-outlined text-sm mr-1"
+                    >paid</span
                   >
-                    <span
-                      class="material-symbols-outlined text-secondary"
-                      data-icon="health_and_safety"
-                      >health_and_safety</span
-                    >
-                    <span class="font-medium">Premium Health Insurance</span>
-                    <div
-                      class="flex items-center gap-4 p-4 border border-outline-variant/15 rounded-lg"
-                    >
-                      <span
-                        class="material-symbols-outlined text-secondary"
-                        data-icon="fitness_center"
-                        >fitness_center</span
-                      >
-                      <span class="font-medium"
-                        >Wellness &amp; Gym Subscription</span
-                      >
-                    </div>
-                  </div>
+                  $160k - $210k
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </div>
-      <!-- Right Column: Sidebar (Sticky & Concise) -->
-      <aside class="lg:col-span-4">
-        <div class="sticky top-24 space-y-8">
-          <!-- Apply Card -->
-          <div
-            class="bg-surface-container-lowest p-8 rounded-xl editorial-shadow border border-outline-variant/10 space-y-6"
-          >
-            <div class="space-y-2">
-              <p
-                class="text-xs font-bold text-on-surface-variant tracking-widest uppercase"
+            <div class="flex flex-col gap-2 w-full md:w-auto">
+              <button
+                class="bg-gradient-to-br from-primary to-primary-container px-8 py-3 rounded-lg text-white font-bold shadow-lg hover:scale-95 transition-transform duration-200 whitespace-nowrap"
               >
-                Immediate Action
+                Apply
+              </button>
+              <button
+                class="px-8 py-3 rounded-lg border border-outline-variant text-primary font-bold hover:bg-surface-container transition-colors whitespace-nowrap"
+              >
+                Save Role
+              </button>
+            </div>
+          </div>
+          <!-- Job Card 2 -->
+          <div
+            class="bg-surface-container-lowest p-8 rounded-xl flex flex-col md:flex-row justify-between items-start gap-6 hover:bg-surface-container-low transition-all group duration-300"
+          >
+            <div class="max-w-2xl">
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-3 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-[10px] font-bold uppercase tracking-wider"
+                  >On-site</span
+                >
+                <span class="text-on-surface-variant text-sm font-medium"
+                  >Aether Design Bureau</span
+                >
+              </div>
+              <h2
+                class="text-2xl font-extrabold text-primary mb-3 group-hover:text-primary-container transition-colors"
+              >
+                Lead Product Architect
+              </h2>
+              <p class="text-on-surface-variant leading-relaxed text-sm">
+                Join our premier editorial design team to redefine the digital
+                interface of global commerce. Requires deep mastery of
+                structural aesthetics and user psychology.
               </p>
-              <h3 class="text-2xl font-headline font-bold text-primary">
-                Boost Your Career
-              </h3>
+              <div class="mt-6 flex gap-4">
+                <div
+                  class="flex items-center text-xs font-semibold text-outline"
+                >
+                  <span class="material-symbols-outlined text-sm mr-1"
+                    >schedule</span
+                  >
+                  5 hours ago
+                </div>
+                <div
+                  class="flex items-center text-xs font-semibold text-outline"
+                >
+                  <span class="material-symbols-outlined text-sm mr-1"
+                    >paid</span
+                  >
+                  $140k - $185k
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 w-full md:w-auto">
+              <button
+                class="bg-gradient-to-br from-primary to-primary-container px-8 py-3 rounded-lg text-white font-bold shadow-lg hover:scale-95 transition-transform duration-200 whitespace-nowrap"
+              >
+                Apply
+              </button>
+              <button
+                class="px-8 py-3 rounded-lg border border-outline-variant text-primary font-bold hover:bg-surface-container transition-colors whitespace-nowrap"
+              >
+                Save Role
+              </button>
+            </div>
+          </div>
+          <!-- Job Card 3 -->
+          <div
+            class="bg-surface-container-lowest p-8 rounded-xl flex flex-col md:flex-row justify-between items-start gap-6 hover:bg-surface-container-low transition-all group duration-300"
+          >
+            <div class="max-w-2xl">
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold uppercase tracking-wider"
+                  >Hybrid</span
+                >
+                <span class="text-on-surface-variant text-sm font-medium"
+                  >Stellar FinTech</span
+                >
+              </div>
+              <h2
+                class="text-2xl font-extrabold text-primary mb-3 group-hover:text-primary-container transition-colors"
+              >
+                Director of Data Strategy
+              </h2>
+              <p class="text-on-surface-variant leading-relaxed text-sm">
+                Seeking a strategic operative to oversee our institutional data
+                assets. This role is pivotal in establishing the next generation
+                of financial intelligence platforms.
+              </p>
+              <div class="mt-6 flex gap-4">
+                <div
+                  class="flex items-center text-xs font-semibold text-outline"
+                >
+                  <span class="material-symbols-outlined text-sm mr-1"
+                    >schedule</span
+                  >
+                  1 day ago
+                </div>
+                <div
+                  class="flex items-center text-xs font-semibold text-outline"
+                >
+                  <span class="material-symbols-outlined text-sm mr-1"
+                    >paid</span
+                  >
+                  $200k - $250k
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 w-full md:w-auto">
+              <button
+                class="bg-gradient-to-br from-primary to-primary-container px-8 py-3 rounded-lg text-white font-bold shadow-lg hover:scale-95 transition-transform duration-200 whitespace-nowrap"
+              >
+                Apply
+              </button>
+              <button
+                class="px-8 py-3 rounded-lg border border-outline-variant text-primary font-bold hover:bg-surface-container transition-colors whitespace-nowrap"
+              >
+                Save Role
+              </button>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <nav class="flex items-center justify-between pt-12">
+            <button
+              class="flex items-center gap-2 text-sm font-bold text-primary opacity-50 cursor-not-allowed"
+            >
+              <span class="material-symbols-outlined">arrow_back</span> Previous
+            </button>
+            <div class="flex gap-2">
+              <button
+                class="w-10 h-10 rounded-lg bg-primary text-white font-bold flex items-center justify-center"
+              >
+                1
+              </button>
+              <button
+                class="w-10 h-10 rounded-lg hover:bg-surface-container-high text-primary font-bold flex items-center justify-center transition-colors"
+              >
+                2
+              </button>
+              <button
+                class="w-10 h-10 rounded-lg hover:bg-surface-container-high text-primary font-bold flex items-center justify-center transition-colors"
+              >
+                3
+              </button>
+              <span
+                class="w-10 h-10 flex items-center justify-center text-outline"
+                >...</span
+              >
+              <button
+                class="w-10 h-10 rounded-lg hover:bg-surface-container-high text-primary font-bold flex items-center justify-center transition-colors"
+              >
+                12
+              </button>
             </div>
             <button
-              class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all active:scale-95"
+              class="flex items-center gap-2 text-sm font-bold text-primary hover:text-primary-container transition-colors"
             >
-              Apply Now
+              Next <span class="material-symbols-outlined">arrow_forward</span>
             </button>
-            <div class="flex flex-col gap-3 text-sm text-on-surface-variant">
-              <div class="flex items-center justify-between">
-                <span>Applicants</span>
-                <span class="font-bold text-primary">124</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Level</span>
-                <span class="font-bold text-primary">Senior / Executive</span>
-              </div>
-            </div>
-            <hr class="border-outline-variant/10" />
-            <div class="flex justify-center gap-4">
-              <button
-                class="flex items-center gap-2 text-xs font-bold uppercase tracking-tight hover:text-primary transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-lg"
-                  data-icon="share"
-                  >share</span
-                >
-                Share
-              </button>
-              <button
-                class="flex items-center gap-2 text-xs font-bold uppercase tracking-tight hover:text-primary transition-colors"
-              >
-                <span
-                  class="material-symbols-outlined text-lg"
-                  data-icon="bookmark"
-                  >bookmark</span
-                >
-                Save
-              </button>
-            </div>
-          </div>
-          <!-- Company Snapshot -->
-          <div class="bg-surface-container-low p-8 rounded-xl space-y-6">
-            <div class="flex items-center gap-4">
-              <img
-                alt="Nexus Media Logo"
-                class="w-12 h-12 rounded-lg object-cover"
-                data-alt="minimalist modern corporate building facade with glass windows and clean architectural lines in daylight"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAByiD4pJnTvK8sbppUi4E9lX2kU4wyPxPi2b7M_cjwOfFN2_G90OrQWo0HlUwdlWgYdp_GXrVOy_mAylxyZypfgtAHkkgUmrTVhHh1OrTGINz_XPuQzEjXj68dnvGUYCsn8ipAvI4WNQC8qRcqTuwRpgRcXQK9rn93I4nr-FggT310acouR80CDl4FRr4DSSdtooPLrBr8CH5AfVqnL3JCbo1hXayoxvrq6Zm9152nmjypkghII-AqhvCEXMRByjqZidnXuCq3Cpw"
-              />
-              <div>
-                <h4 class="font-headline font-bold text-lg">
-                  Nexus Media Group
-                </h4>
-                <p class="text-xs text-on-surface-variant">
-                  Media &amp; Advertising
-                </p>
-              </div>
-            </div>
-            <p class="text-sm leading-relaxed text-on-surface-variant">
-              Leaders in the European digital ecosystem, with a reach of more
-              than 40 million unique monthly users.
-            </p>
-            <a
-              class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest hover:underline"
-              href="#"
-            >
-              View company profile
-              <span
-                class="material-symbols-outlined text-sm"
-                data-icon="arrow_forward"
-                >arrow_forward</span
-              >
-            </a>
-          </div>
+          </nav>
         </div>
-      </aside>
+      </div>
     </main>
-    <!-- Detailed Company Section (Bento Grid) -->
-    <section class="bg-surface-container-low py-20 mt-12">
-      <div class="max-w-7xl mx-auto px-12">
-        <h2
-          class="text-xs font-bold font-headline text-on-surface-variant tracking-[0.2em] uppercase mb-12"
+    <!-- Simple Footer -->
+    <footer class="bg-primary text-white p-8 flex justify-between items-center">
+      <article class="flex flex-wrap items-center gap-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1.5em"
+          height="1.em"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="icon icon-tabler icons-tabler-filled icon-tabler-briefcase"
         >
-          Why work at Nexus
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div
-            class="bg-surface-container-lowest p-10 rounded-xl editorial-shadow"
-          >
-            <h4 class="font-headline font-bold text-xl mb-4 text-primary">
-              Innovation Culture
-            </h4>
-            <p class="text-sm text-on-surface-variant">
-              We don't just follow trends, we create them. We invest 20% of our
-              time in R&D projects.
-            </p>
-          </div>
-          <div
-            class="md:col-span-2 relative overflow-hidden rounded-xl h-64 md:h-auto"
-          >
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent z-10"
-            ></div>
-            <img
-              alt="Office Culture"
-              class="absolute inset-0 w-full h-full object-cover"
-              data-alt="contemporary open plan office space with high ceilings, large windows, and people collaborating at minimalist desks"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaJbaHHs1na1h3-Nm2QIwPFvc5mE9gFtQccNFOjznt9yB88itJOQswrB5p94OwTAcpNyxfYgZCDu_bZ2BScqL4fUZJincOW5SPTA3KXHoFCI3dJ0vr0O5wDYjVfS687xvvQgjaEn1S78Gr8KtE7ifnUlA_iKRbNxpkJOAu3erQWJ7RODVzkBVIYKGc1cKmlgaNIsGb2A5NsEOY0e4eixLABMpcyy5Vfka-GvidIBm4yBlqYJAyw_cryx1aq41WS80OfoqhUvi4h0o"
-            />
-            <div class="absolute bottom-6 left-6 z-20 text-on-primary">
-              <p class="text-xs font-bold uppercase tracking-widest opacity-80">
-                Our Offices
-              </p>
-              <h4 class="text-2xl font-headline font-bold">
-                A space designed for creation.
-              </h4>
-            </div>
-          </div>
-          <div class="bg-primary p-10 rounded-xl text-on-primary">
-            <h4 class="font-headline font-bold text-xl mb-4">
-              Global Diversity
-            </h4>
-            <p class="text-sm opacity-80">
-              A team of 24 nationalities working towards a single goal:
-              informational excellence.
-            </p>
-          </div>
-          <div class="bg-surface-container-highest p-10 rounded-xl">
-            <h4 class="font-headline font-bold text-xl mb-4 text-primary">
-              Sustainability
-            </h4>
-            <p class="text-sm text-on-surface-variant">
-              Committed to carbon neutrality by 2028.
-            </p>
-          </div>
-          <div
-            class="bg-surface-container-lowest p-10 rounded-xl editorial-shadow"
-          >
-            <h4 class="font-headline font-bold text-xl mb-4 text-primary">
-              Growth
-            </h4>
-            <p class="text-sm text-on-surface-variant">
-              Personalized career plans and annual budget for external training.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Footer (Shared Component) -->
-    <footer
-      class="w-full bg-[#f7f9fb] dark:bg-[#000a34] border-t border-[#c4c6ce]/15 font-inter text-xs tracking-wide uppercase mt-12"
-    >
-      <div
-        class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-12 py-8"
-      >
-        <div class="text-[#000a34] dark:text-[#f7f9fb] mb-4 md:mb-0">
-          Copyright 2025 Work
-        </div>
-        <nav class="flex gap-8">
-          <a
-            class="text-slate-400 dark:text-slate-500 hover:text-[#000a34] dark:hover:text-white underline decoration-[#c4c6ce]/30 transition-all"
-            href="#"
-            >Privacy Policy</a
-          >
-          <a
-            class="text-slate-400 dark:text-slate-500 hover:text-[#000a34] dark:hover:text-white underline decoration-[#c4c6ce]/30 transition-all"
-            href="#"
-            >Terms of Service</a
-          >
-          <a
-            class="text-slate-400 dark:text-slate-500 hover:text-[#000a34] dark:hover:text-white underline decoration-[#c4c6ce]/30 transition-all"
-            href="#"
-            >Contact</a
-          >
-        </nav>
-      </div>
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z"
+          />
+        </svg>
+        <h1 class="text-lg font-bold">Work</h1>
+
+        <small class="w-full mt-2 text-sm opacity-80"
+          >&copy; 2024 Work. All rights reserved.</small
+        >
+      </article>
+
+      <section class="flex gap-6">
+        <a
+          href=""
+          class="text-on-surface-variant no-underline font-medium transition-colors duration-200 hover:text-primary-container"
+          >Privacy Policy</a
+        >
+        <a
+          href=""
+          class="text-on-surface-variant no-underline font-medium transition-colors duration-200 hover:text-primary-container"
+          >Terms of Service</a
+        >
+        <a
+          href=""
+          class="text-on-surface-variant no-underline font-medium transition-colors duration-200 hover:text-primary-container"
+          >Contact Us</a
+        >
+      </section>
     </footer>
   </body>
 </html>

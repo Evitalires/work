@@ -1,0 +1,367 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sign In | Work</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#001c37",
+              "on-primary-fixed": "#001452",
+              "surface-tint": "#004ced",
+              "surface-dim": "#d8dadc",
+              surface: "#f7f9fb",
+              "on-secondary-container": "#49617f",
+              "on-error": "#ffffff",
+              "secondary-container": "#c4dcff",
+              primary: "#000a34",
+              "surface-container-low": "#f2f4f6",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#38485d",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              secondary: "#49607e",
+              "secondary-fixed-dim": "#b0c8eb",
+              "on-surface-variant": "#43474d",
+              tertiary: "#000f22",
+              "surface-container-highest": "#e0e3e5",
+              error: "#ba1a1a",
+              "on-tertiary-container": "#7c8ca4",
+              "on-surface": "#191c1e",
+              "secondary-fixed": "#d2e4ff",
+              "inverse-primary": "#b7c4ff",
+              "on-secondary": "#ffffff",
+              "surface-variant": "#e0e3e5",
+              "surface-container": "#eceef0",
+              outline: "#74777e",
+              "primary-container": "#001c66",
+              "inverse-surface": "#2d3133",
+              "on-error-container": "#93000a",
+              "tertiary-fixed-dim": "#b7c8e1",
+              "primary-fixed": "#dde1ff",
+              "on-tertiary-fixed": "#0b1c30",
+              "surface-bright": "#f7f9fb",
+              "inverse-on-surface": "#eff1f3",
+              "on-background": "#191c1e",
+              "tertiary-container": "#142538",
+              "on-secondary-fixed-variant": "#314865",
+              "outline-variant": "#c4c6ce",
+              "on-primary-fixed-variant": "#0038b6",
+              "on-primary-container": "#6182ff",
+              "surface-container-high": "#e6e8ea",
+              background: "#f7f9fb",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#d3e4fe",
+              "primary-fixed-dim": "#b7c4ff",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+      }
+    </style>
+  </head>
+  <body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+    <main class="flex-grow flex flex-col lg:flex-row h-full">
+      <!-- Columna de Imagen: El Ledger Arquitectónico -->
+      <div
+        class="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-primary items-center justify-center p-24"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Oficina de diseño minimalista"
+            class="w-full h-full object-cover opacity-40 mix-blend-luminosity"
+            data-alt="Modern minimal office space with large windows and high-end furniture in a sophisticated deep navy lighting atmosphere"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9mq_bCFEAugbNR2RYSqRnc0LKOcMxYJ9FicXlGBzMD0jgeUqU7XmxXLrXQch_xt1jG2kUO6juyQOMACi1uMrNR-QGcGOaTZKxoMoJgzru27MhMJ9__JI0RXO8afgXNriaAIhYztdbmIj3RIvSblPs3ev2WzHYD1hIocjCkKTlpWzrpGxMgcCor0wHsJUlUZWfg8BjM5DHRRO7Wsd6N7OToiGbH7gMEaS6kBEzx4Lg3AY8hJ8zwQUc7fHzz6JlHCz9IMZr7Hj2weQ"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary-container/90"
+          ></div>
+        </div>
+        <div class="relative z-10 max-w-lg">
+          <h1
+            class="font-headline text-5xl font-extrabold tracking-tighter text-white mb-8 leading-tight"
+          >
+            Excellence <br />Begins Here.
+          </h1>
+          <p
+            class="text-primary-fixed opacity-90 text-lg mb-12 leading-relaxed"
+          >
+            Join the market-leading institution. Where every transaction is
+            curated and every opportunity is editorially verified.
+          </p>
+          <div class="grid grid-cols-2 gap-8">
+            <div>
+              <div class="text-white font-headline text-3xl font-bold mb-1">
+                2.4k+
+              </div>
+              <div
+                class="text-on-primary-container text-xs font-label uppercase tracking-widest"
+              >
+                Active Companies
+              </div>
+            </div>
+            <div>
+              <div class="text-white font-headline text-3xl font-bold mb-1">
+                150+
+              </div>
+              <div
+                class="text-on-primary-container text-xs font-label uppercase tracking-widest"
+              >
+                Countries Covered
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Columna de Formularios -->
+      <div
+        class="w-full lg:w-1/2 flex flex-col justify-center items-center p-8 md:p-16 lg:p-24 bg-surface"
+      >
+        <!-- Branding Header -->
+        <div class="w-full max-w-md mb-12">
+          <div
+            class="font-headline text-2xl font-black tracking-tighter text-primary mb-2"
+          >
+            Work
+          </div>
+          <div class="h-1 w-12 bg-primary"></div>
+        </div>
+        <!-- Tab Switcher -->
+        <div
+          class="w-full max-w-md bg-surface-container-low p-1 rounded-lg flex mb-10"
+        >
+          <button
+            class="flex-1 py-2 text-sm font-label font-bold rounded-lg bg-surface-container-lowest text-primary shadow-sm"
+            id="loginTab"
+          >
+            Sign In
+          </button>
+          <button
+            class="flex-1 py-2 text-sm font-label text-on-surface-variant hover:text-primary transition-colors"
+            id="registerTab"
+          >
+            Create Account
+          </button>
+        </div>
+        <!-- Formulario de Inicio de Sesión -->
+        <section class="w-full max-w-md" id="loginForm">
+          <header class="mb-8">
+            <h2 class="font-headline text-3xl font-bold text-primary mb-2">
+              Welcome back
+            </h2>
+            <p class="text-on-surface-variant text-sm">
+              Access your personalized dashboard.
+            </p>
+          </header>
+          <form class="space-y-6">
+            <div class="space-y-2">
+              <label
+                class="text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant"
+                for="email"
+                >Email Address</label
+              >
+              <div class="relative group">
+                <span
+                  class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-lg group-focus-within:text-primary transition-colors"
+                  >mail</span
+                >
+                <input
+                  class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border-none rounded-lg focus:ring-2 focus:ring-primary/10 bg-surface focus:bg-surface-container-lowest outline-variant transition-all text-sm placeholder:text-outline/50"
+                  id="email"
+                  name="email"
+                  placeholder="name@example.com"
+                  type="email"
+                />
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="flex justify-between items-end">
+                <label
+                  class="text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant"
+                  for="password"
+                  >Password</label
+                >
+                <a
+                  class="text-[10px] font-label font-bold uppercase tracking-widest text-primary hover:underline"
+                  href="#"
+                  >Forgot your password?</a
+                >
+              </div>
+              <div class="relative group">
+                <span
+                  class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-lg group-focus-within:text-primary transition-colors"
+                  >lock</span
+                >
+                <input
+                  class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border-none rounded-lg focus:ring-2 focus:ring-primary/10 bg-surface focus:bg-surface-container-lowest outline-variant transition-all text-sm placeholder:text-outline/50"
+                  id="password"
+                  name="password"
+                  placeholder="••••••••"
+                  type="password"
+                />
+              </div>
+            </div>
+            <div class="flex items-center space-x-3 mb-4">
+              <input
+                class="w-4 h-4 rounded text-primary border-outline-variant focus:ring-primary/20"
+                id="remember"
+                type="checkbox"
+              />
+              <label class="text-sm text-on-surface-variant" for="remember"
+                >Keep me signed in for 30 days</label
+              >
+            </div>
+            <button
+              class="w-full bg-gradient-to-r from-primary to-primary-container text-white font-label font-bold py-4 rounded-lg hover:opacity-90 active:scale-[0.98] transition-all flex justify-center items-center gap-2"
+              type="submit"
+            >
+              <span>Sign In</span>
+              <span class="material-symbols-outlined text-sm"
+                >arrow_forward</span
+              >
+            </button>
+          </form>
+          <div class="relative my-10">
+            <div class="absolute inset-0 flex items-center">
+              <div class="w-full border-t border-outline-variant/30"></div>
+            </div>
+            <div
+              class="relative flex justify-center text-xs uppercase tracking-widest"
+            >
+              <span class="bg-surface px-4 text-on-surface-variant font-medium"
+                >Or continue with</span
+              >
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <button
+              class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-lg font-label font-semibold text-sm text-primary"
+            >
+              <img
+                alt="Google Logo"
+                class="w-5 h-5"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_CnFGwaEYQ_5DtQfNTy6Ft4rIyWayn_MXUEk4oE9CsC1EecZD9spMFCKkP4u9o3U7XZaNw934j8gFWZy7IpiVE4NysnYvdFQJ8O-H0Ux9WulIeaflQOuUyi1mNsg3tBqIKpKbT0u-uHgXdO-3DVp7SD2BCWyTD6UMnO-tkYV7miGjdVh36BsjnCpvxn7YHUF_SINOR0I9dxRUN1nItsrxmXlJCuE2GKwzy8dWauIvsZ36S4581kkRI4Ga40paE2U-LLNg1ht4AHs"
+              />
+              <span>Google</span>
+            </button>
+            <button
+              class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-lg font-label font-semibold text-sm text-primary"
+            >
+              <img
+                alt="Facebook Logo"
+                class="w-5 h-5"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzFOZ9XdrELmF9vQBhjeP-Ss354DormUFoSjTfIofI8Wb0JCwBqECGnwUfe0Hdu8I5DdC-h5AExC5Gb7h7pJdrfeuE2aNLuEhLp_FGxfRf-He6O2Cvd1IJZZSAlv2EBYTGrk5zN4LPnIodVffScaROp8WmSi0qGwvd6mLc3H1-awt1uDHjdo9yULs6BGrcRDnQKS7IIn9Do8VTwKrvYnoMlGBvjaraGmmJpJFoGEep8e37z91HhkqgDUugFsYuCvMj_F_e4FULPJM"
+              />
+              <span>Facebook</span>
+            </button>
+          </div>
+        </section>
+        <!-- Pie de Página del Formulario -->
+        <!-- <footer
+          class="bg-primary text-white p-8 flex justify-between items-center"
+        >
+          <article class="flex flex-wrap items-center gap-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.5em"
+              height="1.em"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="icon icon-tabler icons-tabler-filled icon-tabler-briefcase"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z"
+              />
+            </svg>
+            <h1 class="text-lg font-bold">Work</h1>
+
+            <small class="w-full mt-2 text-sm opacity-80"
+              >&copy; 2024 Work. All rights reserved.</small
+            >
+          </article>
+
+          <section class="flex gap-6">
+            <a
+              href=""
+              class="text-on-surface-variant no-underline font-medium transition-colors duration-200 hover:text-primary-container"
+              >Privacy Policy</a
+            >
+            <a
+              href=""
+              class="text-on-surface-variant no-underline font-medium transition-colors duration-200 hover:text-primary-container"
+              >Terms of Service</a
+            >
+            <a
+              href=""
+              class="text-on-surface-variant no-underline font-medium transition-colors duration-200 hover:text-primary-container"
+              >Contact Us</a
+            >
+          </section>
+        </footer> -->
+      </div>
+    </main>
+    <!-- Modal de Registro (Oculto por defecto, simulado para UI) -->
+    <div
+      class="hidden fixed inset-0 bg-primary/20 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      id="registerOverlay"
+    >
+      <!-- Este contenedor representaría el flujo de registro si el usuario cambiara de pestaña -->
+    </div>
+    <!-- Script de Toggle Visual de Tabs (CSS-only feel) -->
+    <style>
+      /* Logic for tab states */
+      #loginTab.active {
+        background-color: white;
+        color: #000a34;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      #registerTab.active {
+        background-color: white;
+        color: #000a34;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </body>
+</html>
