@@ -33,8 +33,9 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
+    <script type="module" src=""></script>
+    <script defer src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script defer id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
@@ -131,24 +132,21 @@
         <div class="flex items-center gap-12">
           <a
             class="text-2xl font-black tracking-tighter text-[#000a34] dark:text-[#ffffff]"
-            href="#"
+            href="./index.html"
             >Work</a
           >
           <nav class="hidden md:flex items-center gap-8">
             <a
               class="text-slate-500 dark:text-slate-400 hover:text-[#000a34] dark:hover:text-white transition-colors"
-              href="#"
+              href="./jobs.html"
+              target="_blank"
               >Jobs</a
             >
             <a
               class="text-slate-500 dark:text-slate-400 hover:text-[#000a34] dark:hover:text-white transition-colors"
-              href="#"
+              href="./companies.html"
+              target="_blank"
               >Companies</a
-            >
-            <a
-              class="text-slate-500 dark:text-slate-400 hover:text-[#000a34] dark:hover:text-white transition-colors"
-              href="#"
-              >Salaries</a
             >
           </nav>
         </div>
@@ -156,12 +154,15 @@
           <button
             class="text-slate-500 dark:text-slate-400 hover:text-[#000a34] dark:hover:text-white transition-colors"
           >
-            Sign In
+            <a
+              href="./login.html">
+              Sign In
+            </a>
           </button>
           <button
             class="bg-primary-container text-on-primary px-5 py-2 rounded-lg hover:bg-primary transition-all duration-200 active:opacity-80 active:scale-95"
           >
-            Post a Job
+            <a href="./login.html">Post a Job</a>
           </button>
         </div>
       </div>
@@ -195,7 +196,7 @@
           </svg>
           <input
             type="search"
-            name="q"
+            name="job-search"
             id="search-input"
             placeholder="Search jobs by title or Companies"
           />
