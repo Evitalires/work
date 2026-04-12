@@ -10,3 +10,13 @@ jobListing?.addEventListener("click", (event) => {
     button.disabled = true;
   }
 });
+
+const filterCountry = document.querySelector(".filter-country");
+const countrySelected = document.querySelector(".country-selected");
+
+filterCountry?.addEventListener("change", () => {
+  const countrySelectedValue = filterCountry.value;
+  if (countrySelected) {
+    countrySelected.textContent = countrySelectedValue;
+  }
+});
